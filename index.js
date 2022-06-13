@@ -12,13 +12,14 @@ Array.from(document.querySelectorAll(".add")).forEach(el => {
       },
       autoClose, // ms
       onClose() {
-        console.log('CLOSED')
+        console.log('CLOSED');
       },
       onClick(el) {
         console.log(el.target, `CLICKED ID: ${el.target.dataset.id}`);
       },
-      onSuccess(el) {
+      onSuccess(el, close) {
         console.log(el.target, "CONSENTI")
+        close();
       }
     });
   });

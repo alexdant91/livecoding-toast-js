@@ -109,7 +109,8 @@ class Toast {
 
   #onSuccessCallback(e, callback) {
     if (e.target.className.indexOf("toast-success-button") !== -1) {
-      callback(e);
+      const close = (() => this.remove()).bind(this);
+      callback(e, close);
     }
   }
 
