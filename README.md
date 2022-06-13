@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Livecoding
-=======
 # Toast.js
 
 ## Options
@@ -14,4 +11,3 @@
 | `autoClose` | `Number                                                          | Boolean`                             |
 | `onClick`   | `Function`                                                       | Function triggered on click on toast |
 | `onClose`   | `Function`                                                       | Function triggered no toast close    |
->>>>>>> Initial commit
