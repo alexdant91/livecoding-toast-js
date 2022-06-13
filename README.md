@@ -4,7 +4,7 @@
 
 | Name         | Type                                                             | Description                                |
 |:-------------|:-----------------------------------------------------------------|:-------------------------------------------|
-| `position`   | `String`: `top-right`, `top-left`, `bottom-right`, `bottom-left` | Tosst position                             |
+| `position`   | `String`: `top-right`, `top-left`, `bottom-right`, `bottom-left` | Toast position                             |
 | `text`       | `String<any>`                                                    | Message to show                            |
 | `dataset`    | `Object`                                                         | Dataset to pass on toast element           |
 | `canClose`   | `Number`                                                         | Enable toast closing                       |
