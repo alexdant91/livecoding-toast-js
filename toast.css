@@ -1,0 +1,83 @@
+.toast-container {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: 250px;
+  margin: 1em;
+  position: fixed;
+}
+
+.toast-container[data-position^="top-"] {
+  top: 0;
+}
+
+.toast-container[data-position^="bottom-"] {
+  bottom: 0;
+}
+
+.toast-container[data-position$="-left"] {
+  left: 0;
+}
+
+.toast-container[data-position$="-right"] {
+  right: 0;
+}
+
+.toast {
+  box-sizing: border-box;
+  padding: .75rem;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%), 0 2px 15px 0 rgb(0 0 0 / 5%);
+  position: relative;
+  border-radius: .25em;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform ease-in-out .3s;
+}
+
+.toast.progress::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(90deg, #4cd964, #5ac8fa, #007aff, #5856d6, #ff2d55);
+  width: calc(100% * var(--progress));
+  height: 3px;
+}
+
+.toast-container[data-position$="-left"] .toast {
+  transform: translateX(-110%);
+}
+
+.toast-container[data-position$="-right"] .toast {
+  transform: translateX(110%);
+}
+
+.toast-container .toast.show {
+  transform: translate(0, 0);
+}
+
+.toast-close::after {
+  content: "\00D7";
+  position: absolute;
+  top: 0;
+  right: 5px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.toast-success {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toast-success button {
+  background-color: #4cd964;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
